@@ -1,0 +1,24 @@
+name: DEPLOY DEV
+permissions:
+  contents: write
+on:
+  push:
+    tags:
+      - "dev-v*"
+
+jobs:
+  deploy-dev:
+    environment: dev
+    name: deploy dev
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - run: mkdir dist && cp -r assets css js index.html dist/
+
+      - name: Deploy
+        # https://github.com/JamesIves/github-pages-deploy-action
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: dist
