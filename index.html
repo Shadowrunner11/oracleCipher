@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cifrador de texto</title>
+  <link rel="stylesheet" href="./styles.prefixed.css">
+  <script src="./js/main.js" defer type="module"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <main>
+      <h1 class="m-3">Cifrador de texto Alura</h1>
+      <div class="cipher-content m-3 flex-responsive gap-2">
+        <div class="flex-column width-50">
+          <label for="to-cipher-text">Texto a cifrar/decifrar</label>
+          <textarea id="to-cipher-text"></textarea>
+        </div>
+        <div class="flex responsive__buttons">
+          <button class="base-button" id="cipher">Cifrar</button>
+          <button class="base-button" id="decipher">Decifrar</button>
+        </div>
+        <div class="width-50">
+          <p>Resultado</p>
+          <p id="ciphered-text"></p>
+        </div>
+      </div> 
+    </main>
+  </div>
+</body>
+</html>
