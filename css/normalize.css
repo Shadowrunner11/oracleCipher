@@ -1,0 +1,65 @@
+:root{
+  --main-bg: #F3F5FC;
+  --main-text: #0A3871;
+  --secondary-text: #343A40;
+  --logo-length: 1.3rem;
+  --icon-length: 0.4rem;
+}
+
+body{
+  background-color: var(--main-bg);
+}
+
+*{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: var(--main-text);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h3, h1, h2{
+  text-align: center;
+  color: var(--secondary-text);
+  background-color: transparent;
+}
+
+img{
+  height: 100%;
+}
+
+
+button{
+  border-style: none;
+  border: solid 1px var(--main-text);
+  border-radius: 1.5rem;
+  background-color: var(--main-text);
+  color: var(--main-bg);
+}
+
+p, label{
+  color: var(--secondary-text);
+}
+
+
+textarea{
+  min-height: 200px;
+  outline: none;
+  color: var(--main-text);
+  border: none;
+  background-color: transparent;
+}
+
+textarea, textarea::placeholder{
+  color: var(--main-text);
+  font-size: xx-large;
+}
+
+textarea:hover, textarea:focus{
+  outline: none;
+}
+
+
+main{
+  height: 100vh;
+}

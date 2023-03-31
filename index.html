@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cifrador de texto</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/main.js" defer type="module"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <main class="flex-responsive p-3 justify-between gap-3">
+      <div class="p-3 flex-column justify-between text-input-container">
+        <div class="logo-container">
+          <img src="./assets/aluraLogo.svg" alt="logo Alura"/>
+        </div>
+        <div class="main-container flex-column justify-between">
+          <textarea
+          class="width-100" 
+          placeholder="Ingreso el texto aqui"
+          id="to-cipher-text" 
+          data-textarea="input-text"></textarea>
+          <div class="flex justify-left gap-2 width-100 info">
+            <div class="container-icon">
+              <img src="./assets/infoIcon.svg" alt="information icon"/>
+            </div>
+            <p>Solo letras minúsculas y sin acentos</p>
+          </div>
+          <div class="buttons-container flex justify-between gap-2">
+            <button data-button="cipher">
+              Encriptar
+            </button>
+            <button class="secondary-button" data-button="decipher">
+              Desencriptar
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="card w-100 p-3 flex-column justify-center gap-3" data-card="result">
+        <div class="to-hide">
+          <div class="man-icon">
+            <img src="./assets/man.svg" alt="man with magnifier"/>
+          </div>
+          <h3>Ningún mensaje fue encontrado</h3>
+        </div>
+        <p class="text-center" data-result="text-result">Ingresa el texto que desees encriptar o desencriptar.</p>
+        <button class="hidden" data-button="copy">
+          Copiar
+        </button>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
