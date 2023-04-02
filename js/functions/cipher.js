@@ -6,7 +6,14 @@ import { getMaxLengthofKeys } from "../utils/words.js"
  * @param {string} text 
  * @param {Record<string, string>} replacesDict
  */
+
+// TODO: bajar complejidad de tiempo si es que la letra 
+// a evalur no es letra inicial de ningun caso del diccionario
 export function cipherByDict(text, replacesDict = defaultReplacesDict, isSteppy = true){
+  const initFlags = Object.values(replacesDict).reduce((pojo, next)=>{
+    pojo[next[0]] = true
+    return po
+  }, {})
   let encriptedText = ""
 
   const maxKeyLenght = getMaxLengthofKeys(replacesDict)
@@ -15,6 +22,12 @@ export function cipherByDict(text, replacesDict = defaultReplacesDict, isSteppy 
 
   let index  = 0
   while(index < text.length){
+    const char = text[index]
+    if(initFlags[char]){
+      index++
+      continue
+    }
+
     const valuesToCipher = emptyArray
       .map((_, subIndex)=> text.substring(index, index + subIndex + 1))
 

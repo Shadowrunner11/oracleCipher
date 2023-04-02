@@ -1,9 +1,9 @@
 export const defaultReplacesDict = Object.freeze({
-  a: "en",
-  e: "in",
-  i: "un",
-  o: "as",
-  u: "ol"
+  a: "ai",
+  e: "enter",
+  i: "imes",
+  o: "ober",
+  u: "ufat"
 })
 
 export const defaultReverseDict = Object.freeze(Object
