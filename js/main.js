@@ -1,5 +1,5 @@
 import { defaultReverseDict } from "./config/cipher.js"
-import { cipherByDict } from "./functions/cipher.js"
+import { Cipherer, cipherByDict } from "./functions/cipher.js"
 
 const [
   buttonCipher,
@@ -41,9 +41,11 @@ copyButton?.addEventListener('click', async ()=>{
 
 })
 
+const cipherer = new Cipherer()
+
 
 buttonCipher?.addEventListener('click', () => {
-  const cipheredText = cipherByDict(textAreaToCipher.value)
+  const cipheredText = cipherer.cipher(textAreaToCipher.value)
 
   cipheredTextContainer.textContent = cipheredText
   hideManIcon()
@@ -51,7 +53,7 @@ buttonCipher?.addEventListener('click', () => {
 })
 
 buttonDecipher?.addEventListener('click', () => {
-  const cipheredText = cipherByDict(textAreaToCipher.value, defaultReverseDict, false)
+  const cipheredText = cipherer.decipher(textAreaToCipher.value)
 
   cipheredTextContainer.textContent = cipheredText
   hideManIcon()
