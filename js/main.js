@@ -1,5 +1,4 @@
-import { defaultReverseDict } from "./config/cipher.js"
-import { Cipherer, cipherByDict } from "./functions/cipher.js"
+import { Cipherer } from "./functions/cipher.js"
 
 const [
   buttonCipher,
