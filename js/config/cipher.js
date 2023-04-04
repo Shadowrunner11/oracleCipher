@@ -6,10 +6,3 @@ export const defaultReplacesDict = Object.freeze({
   u: "ufat"
 })
 
-export const defaultReverseDict = Object.freeze(Object
-  .keys(defaultReplacesDict)
-  .reduce((prev, key)=> {
-    const value = defaultReplacesDict[key]
-    prev[value] = key
-    return prev
-}, {}))
