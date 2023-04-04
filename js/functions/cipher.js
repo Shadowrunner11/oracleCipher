@@ -1,7 +1,8 @@
+import { defaultReplacesDict } from "../config/cipher.js"
 import { rexifyKeys, swapPojo } from "../utils/words.js"
 
 export class Cipherer{
-  constructor(dict = dictReplacements){
+  constructor(dict = defaultReplacesDict){
       this.originalDict = dict
       this.reversedDict = swapPojo(dict)
       this.rexifiedOriginalKeys = rexifyKeys(dict)
