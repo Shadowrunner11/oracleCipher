@@ -46,7 +46,7 @@ export const swapPojo  = pojo => Object
 export function rexifyKeys(object){
   const preRexify = Object
       .keys(object)
-      .reduce((acum, next)=> `${acum}|${next}`)
+      .join(('|')
 
   return new RegExp(preRexify, "ig")
 }
